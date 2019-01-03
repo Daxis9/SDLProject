@@ -4,9 +4,16 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
+            "label": "default",
             "type": "shell",
-            "command": "echo Hello"
+            "command": "g++",
+            "args": [
+                "-g", "main.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
