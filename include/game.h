@@ -1,4 +1,10 @@
-#include "SDL.h"
+#ifndef GAME_H
+#define GAME_H
+
+#include "SDL2/SDL.h"
+
+#endif
+
 class Game
 {
     public:
@@ -9,7 +15,7 @@ class Game
         //Start the game
         bool Initialize();
         //Loop that runs until the game ends
-        void Runloop();
+        void RunLoop();
         //Stop the game
         void Shutdown();
     private:
@@ -22,4 +28,4 @@ class Game
         SDL_Window* m_Window;
         //Game should continue to run
         bool m_IsRunning;
-}
+};
