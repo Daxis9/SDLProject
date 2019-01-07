@@ -9,9 +9,9 @@ class Game
 {
     public:
         //Constructor
-        Game();
+        //Game();
         //Destructor
-        ~Game();
+        //~Game();
         //Start the game
         bool Initialize();
         //Loop that runs until the game ends
