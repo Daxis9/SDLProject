@@ -10,7 +10,10 @@
             "args": [
                 "-g",
                 "src/Main.cpp",
-                "src/Game.cpp"
+                "src/Game.cpp",
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2"
             ],
             "group": {
                 "kind": "build",
