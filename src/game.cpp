@@ -1,5 +1,8 @@
 #include <iostream>
+#include "SDL2/SDL.h"
 #include "../include/Game.h"
+using namespace std;
+
 
 bool Game::Initialize()
 {
@@ -9,6 +12,7 @@ bool Game::Initialize()
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
         return false;
     }
+
     SDL_Window* m_Window = SDL_CreateWindow(
         "Thomas's Game",    //Window Title
         100,                //x coordinate
@@ -17,11 +21,14 @@ bool Game::Initialize()
         765,                //
         0                   //
     );
+
     if (!m_Window)
     {
         SDL_Log("Unable to create window: %s", SDL_GetError());
         return false;
     }
+
+    return true;
 }
 
 void Game::RunLoop()
@@ -38,4 +45,20 @@ void Game::Shutdown()
 {
     SDL_DestroyWindow(m_Window);
     SDL_Quit();
+}
+
+void Game::ProcessInput()
+{
+    int i = 0;
+    cin >> i;
+}
+
+void Game::UpdateGame()
+{
+
+}
+
+void Game::GenerateOutput()
+{
+
 }
